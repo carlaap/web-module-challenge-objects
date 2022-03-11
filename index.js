@@ -103,7 +103,7 @@ console.log('task 3:', reviews[5].feedback);
 Reyna's feedback is missing! Use what you know to do the following: (no function needed) 
   1. Add this feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
   2. log the reviews array to the console to check your work
-*/ reviews[7].feedback = "this place is chill with really cool people, great for getting work done on weekdays";
+*/ reviews[7].feedback = "this place is chill with really cool people, great for getting work done on weekdays"
 console.log('task 4:', reviews);
 
 
@@ -118,7 +118,8 @@ Write a function that creates an object with name, rating, feedback, add the new
 */
 
 
-function addReview(/*Your Code Here */){
+function addReview(array){
+  return(name, rating, feedback)
   /*Your Code Here */
 }
 
@@ -135,10 +136,11 @@ Use the getReviewByIndex function below to do the following:
 */
 
 
-function getReviewByIndex(/*Your code here*/) {
-  /*Your code here*/
+function getReviewByIndex(array, number) {
+  return `${array[number].name} gave the restaurant a ${array[number].rating} star review, and their feedback was: ${array[number].feedback}`;
+  
 }
-
+console.log('task 6:', getReviewByIndex(reviews, 5))
   
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -154,9 +156,12 @@ Use the getLastReview function below to do the following:
 */
 
 
-function getLastReview(/*Your code here*/) {
-  /*Your code here*/
+function getLastReview(array) {
+  return `${array[array.length -1].name} gave the restaurant a ${array[array.length - 1].rating} star review, and their feedback was: ${array[array.length - 1].feedback}`
+  
 } 
+console.log('Task 7:', getLastReview(reviews));
+
 
 
 
