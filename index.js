@@ -34,6 +34,9 @@ Test your createMenuItems function by doing the following:
   
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
+console.log('Task 1 b;', createMenuItem("wings", "12", "appetizer"))
+console.log('Task 1 b;', createMenuItem("pizza", "7", "Lunch"))
+console.log('Task 1 b;', createMenuItem("cake", "5", "dessert"))
 
 
 
@@ -54,8 +57,23 @@ const burger = {
   name: "Burger", 
   price: 18, 
   category: "Lunch", 
-  
+  discount: function(person){
+    if(person === 'teacher' || person === 'student'){
+        return this.price - (this.price * 0.25);
+  }else if(person === 'public'){
+    return this.price - (this.price * 0.10);
+  }else{
+    return 'no discount for you'
+  }
+ }
 }
+console.log(burger.discount("teacher"))
+console.log(burger.discount("student"))
+console.log(burger.discount("public"))
+
+
+
+
 
 
 
@@ -75,6 +93,9 @@ const reviews = [
 Using the reviews array above:
   1. log only Julius' feedback to the console - no function needed 
 */
+console.log('task 3:', reviews[5].feedback);
+
+
 
 
 
@@ -82,7 +103,8 @@ Using the reviews array above:
 Reyna's feedback is missing! Use what you know to do the following: (no function needed) 
   1. Add this feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
   2. log the reviews array to the console to check your work
-*/
+*/ reviews[7].feedback = "this place is chill with really cool people, great for getting work done on weekdays";
+console.log('task 4:', reviews);
 
 
 
